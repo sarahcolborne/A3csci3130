@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "267457226298",
+    "firebase_url": "https://a4softeng.firebaseio.com",
+    "project_id": "a4softeng",
+    "storage_bucket": "a4softeng.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267457226298:android:68585e16c1d40c48",
+        "android_client_info": {
+          "package_name": "com.acme.a3csci31"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267457226298-7qm0ten96js78ha5aessvme0ppac9slb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATDVYjd6X2rSH88shzsaYfgc1N_txGPb4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
