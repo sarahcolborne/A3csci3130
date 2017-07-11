@@ -7,6 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+/**
+ * This class encompasses the C function in CRUD
+ */
+
 public class CreateContactAcitivity extends Activity {
 
     private Button submitButton;
@@ -98,6 +102,7 @@ public class CreateContactAcitivity extends Activity {
             }
 
             //final check
+            //If no flags raised, valid is set to true
             if (flag == false){
                 valid = true;
 

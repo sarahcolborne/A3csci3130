@@ -32,7 +32,7 @@ import static org.junit.Assert.*;
  *
  * If finish(); is commented out in the activities, you can use the message checking
  * in the tests.
- * 
+ *
  */
 @RunWith(AndroidJUnit4.class)
 public class ExampleInstrumentedTest {

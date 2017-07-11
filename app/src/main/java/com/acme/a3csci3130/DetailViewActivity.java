@@ -10,6 +10,10 @@ import android.widget.TextView;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.*;
 
+/**
+ * This class encompases the RUD functions of CRUD.
+ *
+ */
 public class DetailViewActivity extends Activity {
 
     private EditText nameField, primaryBusField, bNumField, addressField, provinceField;
