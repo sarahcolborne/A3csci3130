@@ -108,6 +108,7 @@ public class CreateContactAcitivity extends Activity {
 
         //If valid, sent to firebase
         if (valid) {
+            errorMessage.setText("Success!");
             Contact person = new Contact(keyID, name, primaryBus, businessNum, address, province);
             appState.firebaseReference.child(keyID).setValue(person);
             finish();

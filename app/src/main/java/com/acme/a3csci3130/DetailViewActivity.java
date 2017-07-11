@@ -52,7 +52,7 @@ public class DetailViewActivity extends Activity {
      *         If invalid, values are not pushed and a message is displayed.
      *
      */
-    public void updateContact(View v){
+    public void updateContact(View v) throws Exception {
         boolean valid = false;
         boolean flag = false;
 
@@ -70,7 +70,7 @@ public class DetailViewActivity extends Activity {
                 //valid
             }
             else { //invalid
-                errorMessage.setText("name");
+                //errorMessage.setText("name");
                 flag = true;
             }
 
@@ -78,7 +78,7 @@ public class DetailViewActivity extends Activity {
                 //valid
             }
             else { //invalid
-                errorMessage.setText("pBus");
+                //errorMessage.setText("pBus");
                 flag = true;
             }
 
@@ -86,7 +86,7 @@ public class DetailViewActivity extends Activity {
                 //valid
             }
             else { //invalid
-                errorMessage.setText("bNum");
+                //errorMessage.setText("bNum");
                 flag = true;
             }
 
@@ -94,7 +94,7 @@ public class DetailViewActivity extends Activity {
                 //valid
             }
             else { //invalid
-                errorMessage.setText("address");
+                //errorMessage.setText("address");
                 flag = true;
             }
 
@@ -102,7 +102,7 @@ public class DetailViewActivity extends Activity {
                 //valid
             }
             else { //invalid
-                errorMessage.setText("province");
+                //errorMessage.setText("province");
                 flag = true;
             }
 
@@ -117,6 +117,9 @@ public class DetailViewActivity extends Activity {
 
         //If valid, sent to firebase
         if (valid) {
+            //clear error message
+            errorMessage.setText("Updated successfully");
+
             //Using values retreived from editText areas, replace Firebase values
             String taskID = receivedPersonInfo.keyID;
             appState.firebaseReference.child(taskID).child("name").setValue(newName);
@@ -124,7 +127,7 @@ public class DetailViewActivity extends Activity {
             appState.firebaseReference.child(taskID).child("bNum").setValue(newBNum);
             appState.firebaseReference.child(taskID).child("address").setValue(newAddress);
             appState.firebaseReference.child(taskID).child("province").setValue(newProvince);
-            //finish();
+            finish();
         }
         else {
             errorMessage.setText("One or more values are invalid. Please try again.");
@@ -141,10 +144,12 @@ public class DetailViewActivity extends Activity {
      *         seafood marketplace). When the user presses the erase button, the entry in
      *         firebase which matches the keyID is removed.
      */
-    public void eraseContact(View v)
-    {
+    public void eraseContact(View v) throws Exception {
         //This erases the child with the matching keyID
+        errorMessage.setText("Business contact deleted");
+
         String taskID = receivedPersonInfo.keyID;
         appState.firebaseReference.child(taskID).removeValue();
+        finish();
     }
 }
