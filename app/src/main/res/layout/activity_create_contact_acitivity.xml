@@ -13,28 +13,61 @@
         android:hint = "Name"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toRightOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginTop="-4dp"
+        android:layout_marginLeft="-368dp"
         android:layout_marginStart="8dp" />
 
     <EditText
-        android:id="@+id/email"
+        android:id="@+id/primaryBusField"
         android:layout_width="395dp"
         android:layout_height="wrap_content"
-        android:hint="e-mail"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/name"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:hint="Primary Business"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginStart="8dp" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <EditText
+        android:id="@+id/bNumField"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-368dp"
+        android:layout_marginStart="8dp"
+        android:hint="Business Number"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/primaryBusField"
+        tools:layout_editor_absoluteY="117dp" />
+
+    <EditText
+        android:id="@+id/addressField"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-368dp"
+        android:layout_marginStart="8dp"
+        android:hint="Address"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bNumField"
+        tools:layout_editor_absoluteY="174dp" />
+
+    <EditText
+        android:id="@+id/provinceField"
+        android:layout_width="395dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="-368dp"
+        android:layout_marginStart="8dp"
+        android:hint="Province Code"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressField"
+        tools:layout_editor_absoluteY="234dp" />
 
     <Button
         android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Contact"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:layout_marginTop="17dp"
+        app:layout_constraintTop_toBottomOf="@+id/provinceField"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -42,6 +75,17 @@
 
         android:onClick="submitInfoButton"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.502" />
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="384dp"
+        android:layout_height="72dp"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/submitButton"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="313dp" />
 
 </android.support.constraint.ConstraintLayout>
